@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+
+/****** Variables couleurs ***********/
+
+$color-primary: #9356DC;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$grey: #EAEAEA;
+$dark-grey: #353535;
+$light-grey: #f3f3f3;
+$withe: #fff;
+
+
+/****** Mixin ***********/
+
+
+
+
+/****** General ***********/
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 1024px;
+}
+
+
+/****** Header ***********/
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        height: 36px;
+        padding: 14px;
+    }
+}
+
+
+/****** Info location ***********/
+
+.info {
+    display: flex;
+    justify-content: center;
+    background-color: $grey;
+    height: 50px;
+    position: relative;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    &__icon {
+        justify-content: center;
+        width: 12px;
+        height: 16px;
+        padding-top: 1px;
+        padding-right: 5px;
+        color: $dark-grey;
+    }
+
+    &__city {
+        width: 109px;
+        height: 19px;
+    }
+
+    &__text {
+        border: none;
+        background-color: $grey;
+        font-weight: 500;
+        size: 16px;
+        line-height: 18.75px;
+        font-family: roboto;
+    }
+}
+
+/****** about ***********/
+
+.about {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: rgb(250, 250, 250);
+    font-family: roboto;
+
+    &__title {
+        color: #000;
+        font-size: 24px;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 18px;
+        color: #353535;
+    }
+
+    &__btn {
+        border: 0;
+        padding: 12px 24px;
+        width: 218px;
+        height: 50px;
+        border-radius: 50px;
+        background: linear-gradient(#FF79DA, #9356DC);
+        color: $withe;
+        font-size: 16;
+        font-weight: 500;
+        cursor: pointer;
+
+
+        &:hover {
+            background-color: white;
+            transition-duration: 0.25s;
+            box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+        }
+    }
+}
+
+
+/****** tuto ***********/
+
+.tuto {
+    width: 375px;
+    height: 440px;
+    top: 400px;
+
+    &__title {
+        font-family: roboto;
+        padding: 16px;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    &__container {}
+}

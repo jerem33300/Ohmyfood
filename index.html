@@ -5,9 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/3931c0fcd0.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <title>Acceuil - Ohmyfood</title>
     <link rel="stylesheet" href="assets/CSS/style.css" />
 </head>
@@ -15,37 +17,41 @@
 <body>
     <!--HEADER-->
     <header class="header">
-        <img src="ASSETS/Images_et_textes_Ohmyfood/images/logo/ohmyfood.png" alt="Logo de la platforme"
-            class="header__logo" />
+        <div class="header__logo">
+            <img src="ASSETS/Images_et_textes_Ohmyfood/images/logo/ohmyfood.png" alt="Logo de la platforme" />
+        </div>
     </header>
 
     <!--MAIN-->
+
     <main>
+
         <!--INFO LOCATION-->
         <section class="info">
-            <div class="info__icon">
-                <i class="fa-sharp fa-solid fa-location-dot"></i>
+            <div class="info__container">
+                <div class="info__icon">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                </div>
+                <div class="info__city">
+                    <input type="text" class="info__text" placeholder="Paris, Belleville" />
+                </div>
             </div>
-            <input type="text" class="info__text" placeholder="Paris, Belleville" />
         </section>
 
-        <!--INFO RESTAURANT-->
-        <section class="info-restaurant">
-            <h1 class="info-restaurant__title">
-                Réservez le menu qui vous convient
-            </h1>
-            <p class="info-restaurant__text">
-                Découvrez des restaurants d'exception, séléctionnés par nos soins.
+
+        <!--A PROPOS-->
+        <section class="about">
+            <h1 class="about__title">Réservez le menu qui vous convient</h1>
+            <p class="about__text">
+                Découvrez des restaurants d'exception, <br>séléctionnés par nos soins.
             </p>
-            <button type="submit" class="info-restaurant__btn">
-                Explorer nos restaurants
-            </button>
+            <button type="submit" class="about__btn">Explorer nos restaurants</button>
         </section>
 
         <!--TUTO-->
         <section class="tuto">
+            <h2 class="tuto__title">Fonctionnement</h2>
             <div class="tuto__container">
-                <h2 class="tuto__title">Fonctionnement</h2>
                 <ol class="tuto__lists">
                     <li class="tuto__list">
                         <i class="tuto__icon fa-solid fa-mobile-screen-button"></i>
