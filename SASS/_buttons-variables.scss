@@ -1,0 +1,31 @@
+
+/****** Mixin ***********/
+@mixin btn-gradient {
+    border: 0;
+    padding: 12px 24px;
+    width: 218px;
+    height: 50px;
+    border-radius: 50px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: $withe;
+    font-size: 16;
+    font-weight: 500;
+    cursor: pointer;
+    transition-duration: 0.25s;
+    box-shadow: 4px 4px 10px rgba(255,255,255,0.25);
+
+    &:hover {
+        background-color: white;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.50);
+    }
+}
+
+/****** Variables couleurs ***********/
+
+$color-primary: #9356DC;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$grey: #EAEAEA;
+$dark-grey: #353535;
+$light-grey: #f3f3f3;
+$withe: #fff;

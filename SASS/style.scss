@@ -1,36 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
-
-/****** Variables couleurs ***********/
-
-$color-primary: #9356DC;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
-$grey: #EAEAEA;
-$dark-grey: #353535;
-$light-grey: #f3f3f3;
-$withe: #fff;
+@import "./buttons-variables";
 
 
-/****** Mixin ***********/
-
-@mixin btn-gradient {
-    border: 0;
-    padding: 12px 24px;
-    width: 218px;
-    height: 50px;
-    border-radius: 50px;
-    background: linear-gradient(#FF79DA, #9356DC);
-    color: $withe;
-    font-size: 16;
-    font-weight: 500;
-    cursor: pointer;
-
-
-    &:hover {
-        background-color: white;
-        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
-    }
-}
 
 
 /****** General ***********/
@@ -38,16 +9,19 @@ $withe: #fff;
 body {
     box-sizing: border-box;
     margin: 0;
-    max-width: 1024px;
+    
 }
 
 
 /****** Header ***********/
 
 .header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    height: 63px;
+    padding: 16px;
+    box-shadow: 0 0 8px rgba(0,0,0,.25);
+    position: relative;
+    z-index: 1000;
+
 
     &__logo {
         display: flex;
@@ -127,8 +101,7 @@ body {
 /****** tuto ***********/
 
 .tuto {
-    width: 375px;
-    height: 440px;
+    height: 400px;
     top: 400px;
 
     &__title {
@@ -138,7 +111,61 @@ body {
         font-size: 24px;
     }
 
-    &__container {
+    &__lists {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;   
+    }    
+
+    &__number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 23px;
+        border: 1px solid $color-primary;
+        background-color: $color-primary;
+        color: $withe;
+        left: -10px;
+        height: 20px;
+        width: 20px;
+        padding: 1%;
+        border-radius: 50%;
+    }
+
+    &__list {
+        display: flex;
+        position: relative;
+        border: 1px transparent; 
+        border-radius: 20px;
+        width: 335px;
+        height: 72.38px;
+        background: #F6F6F6;
+        margin: 1rem 0 1rem 0.75rem;
+        box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+    }
+
+    &__icon  {
+        font-size: 20px;
+        color: #7e7e7e; 
+        margin: 28px 35px 0 15px;
         
     }
+
+    &__icon-shop {
+        color: $color-primary;
+    }
+
+    &__text {
+        font-family: Roboto;
+        font-weight: 500;
+        size: 16px;
+        margin-top: 28px;
+        margin-left: -15px;
+    }
+
+    
 }
