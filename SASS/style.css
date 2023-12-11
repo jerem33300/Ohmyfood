@@ -68,10 +68,20 @@ body {
   color: #000;
   font-size: 24px;
 }
+@media screen and (min-width: 1024px) {
+  .about__title {
+    font-size: 35px;
+  }
+}
 .about__text {
   font-weight: 300;
   font-size: 18px;
   color: #353535;
+}
+@media screen and (min-width: 1024px) {
+  .about__text {
+    font-size: 25px;
+  }
 }
 .about__btn {
   border: 0;
@@ -81,7 +91,7 @@ body {
   border-radius: 50px;
   background: linear-gradient(#FF79DA, #9356DC);
   color: #fff;
-  font-size: 16;
+  font-size: 18;
   font-weight: 500;
   transition-duration: 0.25s;
   box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.25);
@@ -91,10 +101,21 @@ body {
   background-color: white;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
 }
+@media screen and (min-width: 1024px) {
+  .about__btn {
+    width: 30%;
+    font-size: 18px;
+  }
+}
 
 /****** Fonctionnement ***********/
 .tuto {
   height: 400px;
+}
+@media screen and (min-width: 1024px) {
+  .tuto {
+    height: 240px;
+  }
 }
 .tuto__container {
   height: 440px;
@@ -110,9 +131,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+@media screen and (min-width: 1024px) {
+  .tuto__lists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .tuto__number {
   display: flex;
@@ -126,19 +155,25 @@ body {
   left: -10px;
   height: 20px;
   width: 20px;
-  padding: 1%;
+  padding: 5px;
   border-radius: 50%;
 }
 .tuto__list {
   display: flex;
+  text-align: center;
   position: relative;
   border: 1px transparent;
   border-radius: 20px;
-  width: 335px;
+  width: 70%;
   height: 72.38px;
   background: #F6F6F6;
   margin: 1rem 0 1rem 0.75rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+}
+@media screen and (min-width: 1024px) {
+  .tuto__list {
+    width: 28%;
+  }
 }
 .tuto__icon {
   font-size: 20px;
@@ -166,7 +201,6 @@ body {
 }
 .restaurants__title {
   font-family: roboto;
-  padding-left: 16px;
   font-weight: 700;
   font-size: 24px;
 }
@@ -177,6 +211,13 @@ body {
        column-gap: 32px;
   row-gap: 32px;
 }
+@media screen and (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 43%);
+    justify-content: center;
+    justify-content: space-around;
+  }
+}
 
 .card {
   background-color: #fff;
@@ -185,11 +226,6 @@ body {
   text-decoration: none;
   color: inherit;
   display: block;
-}
-@media (min-width: 1024px) {
-  .card {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 .card__img {
   height: 192px;
@@ -241,6 +277,12 @@ body {
   flex-direction: column;
   padding: 16px;
 }
+@media screen and (min-width: 1024px) {
+  .footer__container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
 .footer__logo {
   color: #fff;
   font-family: "Shrikhand", "cursive";
@@ -250,19 +292,25 @@ body {
   font-weight: 400;
   font-style: italic;
 }
+@media screen and (min-width: 1024px) {
+  .footer__logo {
+    padding: 10px;
+    font-size: 25px;
+  }
+}
 .footer__nav {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+@media screen and (min-width: 1024px) {
+  .footer__nav {
+    display: flex;
+    padding: 10px;
+  }
+}
 .footer__nav-link {
   margin: 8px 0;
-}
-.footer__nav-link:first-child {
-  margin-top: 0;
-}
-.footer__nav-link:last-child {
-  margin-bottom: 0;
 }
 .footer__link {
   color: #fff;
