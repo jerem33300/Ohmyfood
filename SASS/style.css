@@ -49,12 +49,11 @@ body {
   height: 19px;
 }
 .info__text {
+  font-family: roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
   border: none;
   background-color: #EAEAEA;
-  font-weight: 500;
-  size: 16px;
-  line-height: 18.75px;
-  font-family: roboto;
 }
 
 /****** about ***********/
@@ -84,19 +83,22 @@ body {
   color: #fff;
   font-size: 16;
   font-weight: 500;
-  cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.25);
+  cursor: pointer;
 }
 .about__btn:hover {
   background-color: white;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/****** tuto ***********/
+/****** Fonctionnement ***********/
 .tuto {
   height: 400px;
-  top: 400px;
+}
+.tuto__container {
+  height: 440px;
+  background-color: #fff;
 }
 .tuto__title {
   font-family: roboto;
@@ -152,4 +154,121 @@ body {
   size: 16px;
   margin-top: 28px;
   margin-left: -15px;
+}
+
+/****** Restaurant Section ***********/
+.restaurants {
+  padding-top: 40px;
+}
+.restaurants__container {
+  background-color: #f6f6f6;
+  padding: 25px 20px 80px 20px;
+}
+.restaurants__title {
+  font-family: roboto;
+  padding-left: 16px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.cards {
+  display: grid;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  row-gap: 32px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+@media (min-width: 1024px) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.card__img {
+  height: 192px;
+  width: 100%;
+  border: transparent solid 0px;
+  border-radius: 16px 16px 0 0;
+  box-shadow: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__badge {
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 8px;
+  border-radius: 2px;
+  position: absolute;
+  top: 16px;
+  right: 12px;
+}
+.card__content {
+  padding: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.card__name {
+  flex: 1;
+}
+.card__title {
+  font-family: roboto, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 4px;
+}
+.card__text {
+  font-family: roboto, sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  margin: 0;
+}
+
+.footer {
+  background-color: #353535;
+  gap: 16px;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.footer__logo {
+  color: #fff;
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+}
+.footer__nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__nav-link {
+  margin: 8px 0;
+}
+.footer__nav-link:first-child {
+  margin-top: 0;
+}
+.footer__nav-link:last-child {
+  margin-bottom: 0;
+}
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+}
+.footer__icon {
+  width: 11px;
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */
