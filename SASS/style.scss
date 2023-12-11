@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 @import "./buttons-variables";
+@import "./animation";
 
 
 
@@ -321,8 +322,8 @@ body {
         font-style: italic;
 
         @media screen and (min-width: 1024px) {
-            padding: 10px;
-            font-size: 25px;
+            padding: 15px 40px 20px 80px;
+            font-size: 18px;
         }
     }
 
@@ -334,6 +335,7 @@ body {
         @media screen and (min-width: 1024px) {
             display: flex;
             padding: 10px;
+            margin-inline-start: auto;
         }
     }
 
@@ -346,6 +348,10 @@ body {
     &__link {
         color: $withe;
         text-decoration: none;
+
+        @media screen and (min-width: 1024px) {
+            padding: 0px 20px 0px 10px;
+        }
     }
 
     &__icon {

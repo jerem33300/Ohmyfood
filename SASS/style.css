@@ -86,12 +86,12 @@ body {
 .about__btn {
   border: 0;
   padding: 12px 24px;
-  width: 218px;
+  width: 220px;
   height: 50px;
   border-radius: 50px;
   background: linear-gradient(#FF79DA, #9356DC);
   color: #fff;
-  font-size: 18;
+  font-size: 16px;
   font-weight: 500;
   transition-duration: 0.25s;
   box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.25);
@@ -100,12 +100,6 @@ body {
 .about__btn:hover {
   background-color: white;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
-}
-@media screen and (min-width: 1024px) {
-  .about__btn {
-    width: 30%;
-    font-size: 18px;
-  }
 }
 
 /****** Fonctionnement ***********/
@@ -294,8 +288,8 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .footer__logo {
-    padding: 10px;
-    font-size: 25px;
+    padding: 15px 40px 20px 80px;
+    font-size: 18px;
   }
 }
 .footer__nav {
@@ -307,6 +301,7 @@ body {
   .footer__nav {
     display: flex;
     padding: 10px;
+    margin-inline-start: auto;
   }
 }
 .footer__nav-link {
@@ -315,6 +310,11 @@ body {
 .footer__link {
   color: #fff;
   text-decoration: none;
+}
+@media screen and (min-width: 1024px) {
+  .footer__link {
+    padding: 0px 20px 0px 10px;
+  }
 }
 .footer__icon {
   width: 11px;
