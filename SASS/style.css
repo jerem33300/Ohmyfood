@@ -9,16 +9,21 @@ body {
 
 /****** Header ***********/
 .header {
-  height: 63px;
+  height: 45px;
   padding: 16px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 1000;
 }
+@media (min-width: 1024px) {
+  .header {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+}
 .header__logo {
   display: flex;
   justify-content: center;
-  height: 36px;
+  height: 28px;
   padding: 14px;
 }
 
@@ -55,6 +60,11 @@ body {
   border: none;
   background-color: #EAEAEA;
 }
+@media (min-width: 1024px) {
+  .info__text {
+    font-size: 1.25VW;
+  }
+}
 
 /****** about ***********/
 .about {
@@ -68,9 +78,9 @@ body {
   color: #000;
   font-size: 24px;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .about__title {
-    font-size: 35px;
+    font-size: 3.12VW;
   }
 }
 .about__text {
@@ -78,9 +88,9 @@ body {
   font-size: 18px;
   color: #353535;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .about__text {
-    font-size: 25px;
+    font-size: 1.41VW;
   }
 }
 .about__btn {
@@ -93,20 +103,21 @@ body {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
-  transition-duration: 0.25s;
+  transition-duration: 0.5s;
   box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.25);
   cursor: pointer;
 }
 .about__btn:hover {
   background-color: white;
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.45);
+  transform: scale(1.01);
 }
 
 /****** Fonctionnement ***********/
 .tuto {
   height: 400px;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .tuto {
     height: 240px;
   }
@@ -130,7 +141,7 @@ body {
   padding: 0;
   list-style: none;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .tuto__lists {
     display: flex;
     flex-direction: row;
@@ -161,10 +172,10 @@ body {
   width: 70%;
   height: 72.38px;
   background: #F6F6F6;
-  margin: 1rem 0 1rem 0.75rem;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  margin: 16px 0 16px 12px;
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.125);
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .tuto__list {
     width: 28%;
   }
@@ -205,7 +216,7 @@ body {
        column-gap: 32px;
   row-gap: 32px;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .cards {
     grid-template-columns: repeat(2, 43%);
     justify-content: center;
@@ -261,6 +272,19 @@ body {
   font-size: 17px;
   margin: 0;
 }
+.card__heart-full {
+  position: absolute;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 1.2s;
+}
+.card__heart-full:hover {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
 
 .footer {
   background-color: #353535;
@@ -271,10 +295,11 @@ body {
   flex-direction: column;
   padding: 16px;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .footer__container {
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
   }
 }
 .footer__logo {
@@ -286,9 +311,9 @@ body {
   font-weight: 400;
   font-style: italic;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .footer__logo {
-    padding: 15px 40px 20px 80px;
+    padding: 38px 40px 20px 80px;
     font-size: 18px;
   }
 }
@@ -297,7 +322,7 @@ body {
   padding: 0;
   margin: 0;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .footer__nav {
     display: flex;
     padding: 10px;
@@ -311,7 +336,7 @@ body {
   color: #fff;
   text-decoration: none;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .footer__link {
     padding: 0px 20px 0px 10px;
   }

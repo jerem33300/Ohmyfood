@@ -17,17 +17,21 @@ body {
 /****** Header ***********/
 
 .header {
-    height: 63px;
+    height: 45px;
     padding: 16px;
     box-shadow: 0 0 8px rgba(0, 0, 0, .25);
     position: relative;
     z-index: 1000;
 
+    @media (min-width: 1024px) {
+        box-shadow: 0 0 8px rgba(0, 0, 0, .10);
+    }
+
 
     &__logo {
         display: flex;
         justify-content: center;
-        height: 36px;
+        height: 28px;
         padding: 14px;
     }
 }
@@ -69,6 +73,10 @@ body {
         font-size: 16px;
         border: none;
         background-color: $grey;
+
+        @media (min-width: 1024px) {
+            font-size: 1.25VW;
+        }
     }
 }
 
@@ -85,8 +93,8 @@ body {
         color: #000;
         font-size: 24px;
 
-        @media screen and (min-width: 1024px) {
-            font-size: 35px;
+        @media (min-width: 1024px) {
+            font-size: 3.12VW;
         }
     }
 
@@ -95,8 +103,8 @@ body {
         font-size: 18px;
         color: #353535;
 
-        @media screen and (min-width: 1024px) {
-            font-size: 25px;
+        @media (min-width: 1024px) {
+            font-size: 1.41VW;
         }
     }
 
@@ -111,7 +119,7 @@ body {
 .tuto {
     height: 400px;
 
-    @media screen and (min-width: 1024px) {
+    @media (min-width: 1024px) {
         height: 240px;
     }
 
@@ -136,7 +144,7 @@ body {
         padding: 0;
         list-style: none;
 
-        @media screen and (min-width: 1024px) {
+        @media (min-width: 1024px) {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
@@ -168,10 +176,10 @@ body {
         width: 70%;
         height: 72.38px;
         background: #F6F6F6;
-        margin: 1rem 0 1rem 0.75rem;
-        box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+        margin: 16px 0 16px 12px;
+        box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.125);
 
-        @media screen and (min-width: 1024px) {
+        @media (min-width: 1024px) {
             width: 28%;
         }
     }
@@ -217,7 +225,7 @@ body {
     column-gap: 32px;
     row-gap: 32px;
 
-    @media screen and (min-width: 1024px) {
+    @media (min-width: 1024px) {
         grid-template-columns: repeat(2, 43%);
         justify-content: center;
         justify-content: space-around;
@@ -278,6 +286,22 @@ body {
         margin: 0;
     }
 
+
+    &__heart-full {
+        position: absolute;
+        opacity: 0;
+        transition-property: all;
+        transition-duration: 1.2s;
+    }
+
+    &__heart-full:hover {
+        opacity: 1;
+        color: transparent;
+        background-image: linear-gradient($color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
 }
 
 .footer {
@@ -290,9 +314,10 @@ body {
         flex-direction: column;
         padding: 16px;
 
-        @media screen and (min-width: 1024px) {
+        @media (min-width: 1024px) {
             flex-direction: row-reverse;
             justify-content: space-between;
+            align-items: center;
         }
     }
 
@@ -305,8 +330,8 @@ body {
         font-weight: 400;
         font-style: italic;
 
-        @media screen and (min-width: 1024px) {
-            padding: 15px 40px 20px 80px;
+        @media (min-width: 1024px) {
+            padding: 38px 40px 20px 80px;
             font-size: 18px;
         }
     }
@@ -316,7 +341,7 @@ body {
         padding: 0;
         margin: 0;
 
-        @media screen and (min-width: 1024px) {
+        @media (min-width: 1024px) {
             display: flex;
             padding: 10px;
             margin-inline-start: auto;
@@ -331,7 +356,7 @@ body {
         color: $withe;
         text-decoration: none;
 
-        @media screen and (min-width: 1024px) {
+        @media (min-width: 1024px) {
             padding: 0px 20px 0px 10px;
         }
     }

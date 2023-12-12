@@ -10,14 +10,16 @@
     color: $withe;
     font-size: 16px;
     font-weight: 500;
-    transition-duration: 0.25s;
+    transition-duration: 0.5s;
     box-shadow: 4px 4px 10px rgba(255,255,255,0.25);
     cursor: pointer;
+    
+    
 
     &:hover {
         background-color: white;
-        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.50);
-
+        box-shadow: 4px 4px 15px rgba(0,0,0,0.45);
+        transform: scale(1.01);
     }
 
        
