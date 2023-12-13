@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
-@import "./buttons-variables";
+@import "./mixins-variables";
 @import "./animation";
 
 
@@ -10,7 +10,7 @@
 body {
     box-sizing: border-box;
     margin: 0;
-
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -34,13 +34,13 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding: 15px;
+        padding: $Pixel16-Value;
     }
 
     &__icon {
         justify-content: center;
         width: 12px;
-        height: 16px;
+        height: $Pixel16-Value;
         padding-top: 1px;
         padding-right: 5px;
         color: $dark-grey;
@@ -54,7 +54,7 @@ body {
     &__text {
         font-family: roboto, sans-serif;
         font-weight: 500;
-        font-size: 16px;
+        font-size: $Pixel16-Value;
         border: none;
         background-color: $grey;
 
@@ -108,15 +108,20 @@ body {
     }
 
     &__container {
-        height: 440px;
+        height: 240px;
         background-color: $withe;
     }
 
     &__title {
         font-family: roboto;
-        padding: 16px;
+        padding: $Pixel16-Value;
         font-weight: 700;
         font-size: 24px;
+
+        @media (min-width: 1024px) {
+            margin-left: 160px;
+            padding: 0;
+        }
     }
 
     &__lists {
@@ -132,6 +137,7 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            margin: 20px 120px 0px 120px;
         }
     }
 
@@ -181,7 +187,7 @@ body {
     &__text {
         font-family: Roboto;
         font-weight: 500;
-        size: 16px;
+        size: $Pixel16-Value;
         margin-top: 28px;
         margin-left: -15px;
     }
@@ -190,17 +196,20 @@ body {
 /****** Restaurant Section ***********/
 
 .restaurants {
-    padding-top: 40px;
-
+    
     &__container {
         background-color: $light-grey;
-        padding: 25px 20px 80px 20px;
+        padding: 15px 20px 80px 20px;
     }
 
     &__title {
         font-family: roboto;
         font-weight: 700;
         font-size: 24px;
+
+        @media (min-width: 1024px) {
+            margin-left: 140px;
+        }
     }
 }
 
@@ -211,14 +220,14 @@ body {
 
     @media (min-width: 1024px) {
         grid-template-columns: repeat(2, 43%);
-        justify-content: center;
         justify-content: space-around;
+        margin: 20px 100px 0px 100px;
     }
 }
 
 .card {
     background-color: $withe;
-    border-radius: 16px;
+    border-radius: $Pixel16-Value;
     position: relative;
     text-decoration: none;
     color: inherit;
@@ -230,22 +239,25 @@ body {
         width: 100%;
         border: transparent solid 0px;
         border-radius: 16px 16px 0 0;
-        box-shadow: none;
+        
         object-fit: cover;
     }
 
     &__badge {
+        display: flex;
+        justify-content: center;
+        width: 80px;
         background-color: $color-tertiary;
         color: darken($color-tertiary, 50%);
         padding: 8px;
         border-radius: 2px;
         position: absolute;
-        top: 16px;
+        top: $Pixel16-Value;
         right: 12px;
     }
 
     &__content {
-        padding: 16px;
+        padding: $Pixel16-Value;
         position: relative;
         display: flex;
         align-items: center;

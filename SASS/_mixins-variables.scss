@@ -46,9 +46,10 @@
 @mixin color-heart {
         position: absolute;
         opacity: 0;
-        cursor: pointer;
-        transition-property: transform 450ms;
-        
+        transition-property: transform;
+        transition: all;
+        transition-duration: 450ms;
+
     &:hover {
         opacity: 1;
         color: transparent;
@@ -87,7 +88,7 @@
     
             @media (min-width: 1024px) {
                 padding: 38px 40px 20px 80px;
-                font-size: 18px;
+                font-size: 1.3vw;
             }
         }
     
@@ -132,4 +133,5 @@ $grey: #EAEAEA;
 $dark-grey: #353535;
 $light-grey: #f6f6f6;
 $withe: #fff;
-$black: #000
+$black: #000;
+$Pixel16-Value: 16px;
