@@ -62,7 +62,7 @@ body {
 }
 @media (min-width: 1024px) {
   .info__text {
-    font-size: 1.25VW;
+    font-size: 1.04VW;
   }
 }
 
@@ -80,7 +80,7 @@ body {
 }
 @media (min-width: 1024px) {
   .about__title {
-    font-size: 3.12VW;
+    font-size: 2.1VW;
   }
 }
 .about__text {
@@ -90,7 +90,7 @@ body {
 }
 @media (min-width: 1024px) {
   .about__text {
-    font-size: 1.41VW;
+    font-size: 1.17VW;
   }
 }
 .about__btn {
@@ -272,13 +272,23 @@ body {
   font-size: 17px;
   margin: 0;
 }
-.card__heart-full {
+.card__like {
+  position: absolute;
+  display: flex;
+  right: 60px;
+  top: 20px;
+  font-size: 30px;
+}
+.card__heart-empty {
+  border-color: #000;
+}
+.card__heart-color {
   position: absolute;
   opacity: 0;
-  transition-property: all;
-  transition-duration: 1.2s;
+  cursor: pointer;
+  transition-property: transform 450ms;
 }
-.card__heart-full:hover {
+.card__heart-color:hover {
   opacity: 1;
   color: transparent;
   background-image: linear-gradient(#9356DC, #ff79da);
