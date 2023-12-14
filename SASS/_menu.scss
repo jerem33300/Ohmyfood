@@ -1,0 +1,26 @@
+.header-arrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.back-arrow {
+    position: absolute;
+    left: 32px;
+    height: 32px;
+    width: 28px;
+    top: 55%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: black;
+}
+
+.img-menu {
+    max-width: 100%;
+    max-height: 512px;
+    width: 100%;
+    object-fit: cover;
+}

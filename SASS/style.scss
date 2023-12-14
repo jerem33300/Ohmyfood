@@ -1,25 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @import "./mixins-variables";
 @import "./animation";
-
-
-
+@import "./menu";
 
 /****** General ***********/
 
 body {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
-
 
 /****** Header ***********/
 
 .header {
-    @include header-pages
+    @include header-pages;
 }
-
 
 /****** Info location ***********/
 
@@ -59,7 +55,7 @@ body {
         background-color: $grey;
 
         @media (min-width: 1024px) {
-            font-size: 1.04VW;
+            font-size: 1.04vw;
         }
     }
 }
@@ -78,7 +74,7 @@ body {
         font-size: 24px;
 
         @media (min-width: 1024px) {
-            font-size: 2.10VW;
+            font-size: 2.1vw;
         }
     }
 
@@ -86,16 +82,16 @@ body {
         font-weight: 300;
         font-size: 18px;
         color: #353535;
+        padding-bottom: 30px;
 
         @media (min-width: 1024px) {
-            font-size: 1.17VW;
+            font-size: 1.17vw;
         }
     }
-
-    &__btn {
+}
+.gradient-btn {
         @include btn-gradient;
     }
-}
 
 
 /****** Fonctionnement ***********/
@@ -165,7 +161,7 @@ body {
         border-radius: 20px;
         width: 70%;
         height: 72.38px;
-        background: #F6F6F6;
+        background: #f6f6f6;
         margin: 16px 0 16px 12px;
         box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.125);
 
@@ -196,7 +192,6 @@ body {
 /****** Restaurant Section ***********/
 
 .restaurants {
-    
     &__container {
         background-color: $light-grey;
         padding: 15px 20px 80px 20px;
@@ -233,13 +228,12 @@ body {
     color: inherit;
     display: block;
 
-
     &__img {
         height: 192px;
         width: 100%;
         border: transparent solid 0px;
         border-radius: 16px 16px 0 0;
-        
+
         object-fit: cover;
     }
 
@@ -282,23 +276,43 @@ body {
         margin: 0;
     }
 
-    &__like {
-        position: absolute;
-        display: flex;
-        right: 60px;
-        top: 20px;
-        font-size: 30px;
+    &__heart {
+        margin-right: 25px;
     }
+
+    &__heart_container {
+        position: relative;
+        cursor: pointer;
+    }
+
 
     &__heart-empty {
-        border-color: #000;
+        color: $black;
+        position: absolute;
+        top: -17px;
+        left: -20px;
+        font-size: 1.5em;
     }
 
-    &__heart-color {
-        @include color-heart
+    heart-empty:hover {
+        display: none;
+    }
+
+
+    &__heart-full {
+        color: transparent;
+        position: absolute;
+        top: -17px;
+        left: -20px;
+        font-size: 1.5em;
+        transition: color 1.2s ease-out;
+
+        &__:hover {
+            background-color: linear-gradient(#FF79DA, #9356DC);
+            transition: color 1s ease-out;
+        }
     }
 }
-
-.footer {
-    @include footer-pages;
-}
+    .footer {
+        @include footer-pages;
+    }
