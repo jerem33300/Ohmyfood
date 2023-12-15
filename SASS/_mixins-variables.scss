@@ -121,3 +121,11 @@ $light-grey: #f6f6f6;
 $withe: #fff;
 $black: #000;
 $Pixel16-Value: 16px;
+
+
+
+body, html {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+  }

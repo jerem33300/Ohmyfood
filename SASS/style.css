@@ -1,6 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 /****** Mixin ***********/
 /****** Variables couleurs ***********/
+body, html {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/****** Mixin ***********/
+/****** Variables couleurs ***********/
+body, html {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
 .header-arrow {
   display: flex;
   flex-direction: row;
@@ -27,6 +41,110 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin: 0;
+}
+
+.menu-pages {
+  margin-top: -4rem;
+  border-radius: 40px 40px 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+}
+.menu-pages__container {
+  padding: 16px 32px 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-pages__title {
+  font-family: "Shrikhand", "cursive";
+  font-size: 28px;
+  font-weight: 400;
+  padding-right: 90px;
+}
+.menu-pages__heart {
+  position: absolute;
+  margin-left: 295px;
+}
+.menu-pages__heart-container {
+  position: relative;
+  cursor: pointer;
+}
+.menu-pages__heart-empty {
+  color: #000;
+  position: absolute;
+  top: -12px;
+  left: -20px;
+  font-size: 1.5em;
+}
+.menu-pages__heart-empty__:hover {
+  display: none;
+}
+.menu-pages__heart-full {
+  color: transparent;
+  position: absolute;
+  top: -12px;
+  left: -20px;
+  font-size: 1.5em;
+  transition: color 1.2s ease-out;
+}
+.menu-pages__heart-full__:hover {
+  background-color: linear-gradient(#9356DC, #ff79da);
+  transition: color 1s ease-out;
+}
+
+.menus {
+  display: grid;
+}
+@media (min-width: 1024px) {
+  .menus {
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+  }
+}
+
+.menu {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 16px;
+}
+.menu__title {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 8px;
+  font-weight: normal;
+}
+.menu__title:after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0px;
+  top: 30px;
+}
+.menu__plate-1 {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  animation: itemAppear 0.6s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  transform: scale(0);
+  max-width: 100%;
+}
+.menu__items {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
 }
 
 /****** General ***********/
@@ -329,7 +447,7 @@ body {
   left: -20px;
   font-size: 1.5em;
 }
-.card heart-empty:hover {
+.card .heart-empty:hover {
   display: none;
 }
 .card__heart-full {

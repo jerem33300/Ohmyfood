@@ -1,3 +1,8 @@
+@import "./mixins-variables";
+
+
+
+
 .header-arrow {
     display: flex;
     flex-direction: row;
@@ -10,9 +15,9 @@
     height: 32px;
     width: 28px;
     top: 55%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transform: translateY(-50%);
     font-size: 18px;
     color: black;
@@ -23,4 +28,119 @@
     max-height: 512px;
     width: 100%;
     object-fit: cover;
+    margin: 0;
+}
+
+.menu-pages {
+    margin-top: -4rem;
+    border-radius: 40px 40px 0 0;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: relative;
+
+    &__container {
+        padding: 16px 32px 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        font-family: "Shrikhand", "cursive";
+        font-size: 28px;
+        font-weight: 400;
+        padding-right: 90px;
+    }
+
+    &__heart {
+        position: absolute;
+        margin-left: 295px;
+    }
+
+    &__heart-container {
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__heart-empty {
+        color: $black;
+        position: absolute;
+        top: -12px;
+        left: -20px;
+        font-size: 1.5em;
+
+        &__:hover {
+            display: none;
+        }
+    }
+
+    &__heart-full {
+        color: transparent;
+        position: absolute;
+        top: -12px;
+        left: -20px;
+        font-size: 1.5em;
+        transition: color 1.2s ease-out;
+
+        &__:hover {
+            background-color: linear-gradient($color-primary, $color-secondary);
+            transition: color 1s ease-out;
+        }
+    }
+}
+
+.menus {
+    display: grid;
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 16px;
+    }
+}
+
+.menu {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 16px;
+
+    &__title {
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 8px;
+        font-weight: normal;
+
+        &:after {
+            content: "";
+            width: 40px;
+            height: 3px;
+            background-color: $color-tertiary;
+            position: absolute;
+            left: 0px;
+            top: 30px;
+        }
+
+    }
+
+    &__plate-1 {
+        background-color: white;
+        padding: 1rem;
+        display: flex;
+        border-radius: 0.75rem;
+        margin: 1rem 0;
+        box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        cursor: pointer;
+        animation: itemAppear .6s;
+        animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+        animation-fill-mode: both;
+        transform: scale(0);
+        max-width: 100%;
+    }
+
+    &__items {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+    }
 }
