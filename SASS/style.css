@@ -75,35 +75,31 @@
   font-weight: 400;
   padding-right: 70px;
 }
-.menu-pages__heart {
+
+.menu-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-heart .fa-heart {
+  font-size: 28px;
   position: absolute;
-  margin-left: 295px;
 }
-.menu-pages__heart-container {
-  position: relative;
-  cursor: pointer;
-}
-.menu-pages__heart-empty {
-  color: #000;
-  position: absolute;
-  top: -12px;
-  left: -20px;
-  font-size: 1.5em;
-}
-.menu-pages__heart-empty__:hover {
-  display: none;
-}
-.menu-pages__heart-full {
+.menu-heart .fa-solid {
   color: transparent;
-  position: absolute;
-  top: -12px;
-  left: -20px;
-  font-size: 1.5em;
-  transition: color 1.2s ease-out;
+  background-image: linear-gradient(#9356DC, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
 }
-.menu-pages__heart-full__:hover {
-  background-color: linear-gradient(#9356DC, #ff79da);
-  transition: color 1s ease-out;
+.menu-heart .fa-solid:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1.1);
+}
+.menu-heart .fa-solid:active {
+  background-image: linear-gradient(#9356DC, #ff79da);
 }
 
 .menus {
@@ -493,6 +489,31 @@ body {
   font-size: 17px;
   margin: 0;
 }
+.card .menu-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .menu-heart .fa-heart {
+  font-size: 28px;
+  position: absolute;
+}
+.card .menu-heart .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+}
+.card .menu-heart .fa-solid:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1.1);
+}
+.card .menu-heart .fa-solid:active {
+  background-image: linear-gradient(#9356DC, #ff79da);
+}
 
 .footer {
   background-color: #353535;
@@ -552,20 +573,4 @@ body {
 .footer__icon {
   width: 11px;
   margin-right: 10px;
-}
-
-.fa-solid {
-  opacity: 0;
-  background-image: linear-gradient(red, blue);
-  color: transparent;
-  position: absolute;
-}
-.fa-solid:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-.card__heart_container {
-  position: relative;
-  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

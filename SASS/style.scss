@@ -291,6 +291,11 @@ body {
         font-size: 17px;
         margin: 0;
     }
+
+    .menu-heart {
+        @include heart;
+        
+    }
 }
 
 
@@ -355,42 +360,3 @@ body {
             margin-right: 10px;
         }
     }
-    
-
-.fa-solid {
-    opacity: 0;
-    background-image: linear-gradient(red, blue);
-    color: transparent;
-    position: absolute;
-    &:hover {
-        opacity: 1;
-        transform: scale(1.1);
-    }
-}
-
-// .card__heart {
-//     margin-right: 25px;
-// }
-
-.card__heart_container {
-    position: relative;
-    cursor: pointer;
-}
-
-
-// .card__heart-empty {
-//     color: $black;
-//     position: absolute;
-//     top: -17px;
-//     left: -20px;
-    
-// }
-
-
-// .card__heart-full  {
-//     color: transparent;
-//     position: absolute;
-//     top: -17px;
-//     left: -20px;
-//     transition: color 1.2s ease-out;
-// }
