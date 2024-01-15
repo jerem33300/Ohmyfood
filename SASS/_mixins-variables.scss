@@ -8,7 +8,7 @@
     height: 50px;
     border-radius: 50px;
     background: linear-gradient($color-secondary, $color-primary);
-    color: $withe;
+    color: $white;
     font-size: 16px;
     font-weight: 500;
     transition-duration: 0.5s;
@@ -40,7 +40,7 @@
         background-image: linear-gradient($color-primary, $color-secondary);
         background-clip: text;
         opacity: 0;
-        transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in;
 
         &:hover {
             cursor: pointer;
@@ -62,7 +62,7 @@ $color-tertiary: #99e2d0;
 $grey: #EAEAEA;
 $dark-grey: #353535;
 $light-grey: #f6f6f6;
-$withe: #fff;
+$white: #fff;
 $black: #000;
 $Pixel16-Value: 16px;
 
