@@ -27,6 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 70px;
 
     .fa-heart {
         font-size: 28px;
@@ -46,10 +47,6 @@
             opacity: 1;
             transform: scale(1.1);
         }
-
-        &:active {
-            background-image: linear-gradient($color-primary, $color-secondary);
-          }
     }
 }
 
