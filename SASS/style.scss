@@ -19,7 +19,7 @@ body {
     padding: 16px;
     box-shadow: 0 0 8px rgba(0, 0, 0, .25);
     position: relative;
-    z-index: 1000;
+    z-index: 1;
 
     @media (min-width: 1024px) {
         box-shadow: 0 0 8px rgba(0, 0, 0, .10);
@@ -276,7 +276,7 @@ body {
     }
 
     &__name {
-        flex: 1;
+        flex: auto;
     }
 
     &__title {
@@ -301,6 +301,7 @@ body {
 }
 
 
+/****** Footer Section ***********/
     .footer {
         background-color: $dark-grey;
         gap: 16px;
