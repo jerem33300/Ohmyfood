@@ -2,58 +2,62 @@
 
 /****** Loader Section ***********/
 
-// .loader-container {
-//     position: fixed;
-//     background: $dark-grey;
-//     top: 0;
-//     left: 0;
-//     z-index: 1;
-//     width: 100%;
-//     height: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     transition: opacity 1s ease-in-out;
-// }
+.loader-container {
+  position: fixed;
+  background: $dark-grey;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+  animation: loader-stop 3.3s;
+}
 
-// .point {
-//     width: 100px;
-//     height: 100px;
-//     border-radius: 50%;
-//     margin: 0 35px;
-//     animation: loader-point infinite 0.5s alternate;
-// }
+.point {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 35px;
+  animation: loader-point 0.5s infinite alternate;
+}
 
-// .p1 {
-//     background: $color-primary
-// }
+.p1 {
+  background: $color-primary;
+}
 
-// .p2 {
-//     background: $color-secondary;
-//     animation-delay: 0.1s;
-// }
+.p2 {
+  background: $color-secondary;
+  animation-delay: 0.1s;
+}
 
-// .p3 {
-//     background: $color-tertiary;
-//     animation-delay: 0.2s;
-// }
+.p3 {
+  background: $color-tertiary;
+  animation-delay: 0.2s;
+}
 
 
-// @keyframes loader-point {
-//     0% {
-//         transform: scaleX(1.6);
-//     }
-//     100% {
-//         transform: translateY(-60px);
-//     }
-// }
+@keyframes loader-point {
+  0% {
+    transform: scaleX(1.6);
+  }
 
-// @keyframes load {
-//     from {
-//         opacity: 0;
-//     }
-//     to {
-//         animation-duration: 5s;
-//         opacity: 1;
-//     }
-// }
+  100% {
+    transform: translateY(-60px);
+
+  }
+}
+
+@keyframes loader-stop {
+  from {
+    visibility: hidden;
+  }
+
+  to {
+    visibility: visible;
+  }
+}
