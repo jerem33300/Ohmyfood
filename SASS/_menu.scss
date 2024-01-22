@@ -93,7 +93,7 @@
 .menu {
     max-width: 100%;
     overflow: hidden;
-    padding: 0 16px;
+    padding: 0 14px;
 
     @media (min-width: 1024px) {
         max-width: 70%;
@@ -119,12 +119,12 @@
     &__plate {
         background-color: $white;
         border-radius: 15.04px;
-        padding: 8px;
+
         display: flex;
-        flex-direction: column;
         margin: 8px 0;
         box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
         max-width: 100%;
+        height: 60px;
         cursor: pointer;
     }
 
@@ -135,13 +135,13 @@
     &__plate-title {
         font-weight: 500;
         font-size: 18px;
-        margin: 0;
+        margin: 10px;
     }
 
     &__description {
         font-weight: 300;
         font-size: 15.04px;
-        margin: 0;
+        margin: 10px;
     }
 
     &__price {
@@ -149,7 +149,8 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        padding-left: 8px;
+        padding-right: 10px;
+
     }
 
     &__confirmation {
@@ -158,7 +159,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-right: -85px;
+        transition-duration: 0.5s;
     }
+
+    &:hover &__confirmation {
+        margin-right: -16px;
+        
+      }
 
 
     &__banner {
@@ -181,6 +189,7 @@
     &__icon {
         color: $color-tertiary;
     }
+    
 }
 
 .command-btn {
