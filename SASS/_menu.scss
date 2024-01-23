@@ -50,7 +50,7 @@
 .menu-pages {
     margin-top: -32px;
     border-radius: 40px 40px 0 0;
-    background-color: #f6f6f6;
+    background-color: $light-grey;
     position: relative;
 
     @media (min-width: 1024px) {
@@ -75,7 +75,6 @@
 
 .menu-heart {
     @include heart-menu;
-    
 }
 
 
@@ -92,7 +91,6 @@
 
 .menu {
     max-width: 100%;
-    overflow: hidden;
     padding: 0 14px;
 
     @media (min-width: 1024px) {
@@ -119,13 +117,13 @@
     &__plate {
         background-color: $white;
         border-radius: 15.04px;
-
         display: flex;
         margin: 8px 0;
         box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
         max-width: 100%;
         height: 60px;
         cursor: pointer;
+        overflow: hidden;
     }
 
     &__items {
@@ -149,25 +147,9 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        padding-right: 10px;
-
+        padding-right: 5px;
+        padding-bottom: 10px;
     }
-
-    &__confirmation {
-        background-color: $color-tertiary;
-        width: 84px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: -85px;
-        transition-duration: 0.5s;
-    }
-
-    &:hover &__confirmation {
-        margin-right: -16px;
-        
-      }
-
 
     &__banner {
         height: 25px;
@@ -177,19 +159,31 @@
         align-items: center;
         justify-content: center;
         border-radius: 50px;
-        transform: rotate(180deg);
-        transition-duration: 0.5s;
-
-
-        &:hover {
-            transform: rotate(0);
-        }
     }
+
 
     &__icon {
         color: $color-tertiary;
     }
-    
+}
+
+.menu__confirmation {
+    background-color: $color-tertiary;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -52px;
+    transition: 0.5s;
+    margin-left: 20px;
+    border-radius: 0 15px 15px 0;
+
+}
+
+.menu__plate:hover {
+    .menu__confirmation {
+        margin-right: -2px;
+    }
 }
 
 .command-btn {

@@ -5,6 +5,7 @@
 /****** Mixin ***********/
 /****** Variables couleurs ***********/
 /****** Loader Section ***********/
+/**loader index**/
 .loader-container {
   position: fixed;
   background: #353535;
@@ -59,9 +60,67 @@
     visibility: visible;
   }
 }
+/**loader menu**/
+.loader-container-menu {
+  position: fixed;
+  background: #353535;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+}
+
+.point-menu {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 35px;
+}
+
+.p1-menu {
+  background: #9356DC;
+}
+
+@keyframes loader-point-menu {
+  0% {
+    transform: scaleX(1.6);
+  }
+  100% {
+    transform: translateY(-60px);
+  }
+}
+@keyframes loader-stop-menu {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+@keyframes point-color {
+  25% {
+    background-color: #9356DC;
+  }
+  50% {
+    background-color: #ff79da;
+  }
+  75% {
+    background-color: #99e2d0;
+  }
+  100% {
+    background-color: #EAEAEA;
+  }
+}
 /****** Apparition vignets  pages menus ***********/
 .vignets {
-  animation: fadein 3s;
+  animation: fadein 0.8s;
+  animation-delay: 3ms;
 }
 
 @keyframes fadein {
@@ -73,17 +132,19 @@
   }
 }
 .vignets1 {
-  animation: fadein 4s;
+  animation: fadein 1.5s;
 }
 
 @keyframes fadein {
   from {
     opacity: 0;
+    transform: scaleX(1.6);
   }
   to {
     opacity: 1;
   }
 }
+/****** Apparition check  pages menus ***********/
 /****** Mixin ***********/
 /****** Variables couleurs ***********/
 /****** Header ***********/
@@ -199,7 +260,6 @@
 
 .menu {
   max-width: 100%;
-  overflow: hidden;
   padding: 0 14px;
 }
 @media (min-width: 1024px) {
@@ -231,6 +291,7 @@
   max-width: 100%;
   height: 60px;
   cursor: pointer;
+  overflow: hidden;
 }
 .menu__items {
   flex: 1;
@@ -250,19 +311,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-right: 10px;
-}
-.menu__confirmation {
-  background-color: #99e2d0;
-  width: 84px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: -85px;
-  transition-duration: 0.5s;
-}
-.menu:hover .menu__confirmation {
-  margin-right: -16px;
+  padding-right: 5px;
+  padding-bottom: 10px;
 }
 .menu__banner {
   height: 25px;
@@ -272,14 +322,25 @@
   align-items: center;
   justify-content: center;
   border-radius: 50px;
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
-}
-.menu__banner:hover {
-  transform: rotate(0);
 }
 .menu__icon {
   color: #99e2d0;
+}
+
+.menu__confirmation {
+  background-color: #99e2d0;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -52px;
+  transition: 0.5s;
+  margin-left: 20px;
+  border-radius: 0 15px 15px 0;
+}
+
+.menu__plate:hover .menu__confirmation {
+  margin-right: -2px;
 }
 
 .command-btn {
