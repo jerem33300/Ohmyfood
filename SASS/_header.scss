@@ -1,0 +1,22 @@
+
+
+
+/****** Header ***********/
+.header {
+    height: 45px;
+    padding: 16px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .25);
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: 1024px) {
+        box-shadow: 0 0 8px rgba(0, 0, 0, .10);
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        height: 28px;
+        padding: 14px;
+    }
+}

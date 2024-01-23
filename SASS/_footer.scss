@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@import "./mixins-variables";
+
+
+/****** Footer Section ***********/
+.footer {
+    background-color: $dark-grey;
+    gap: 16px;
+  
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+
+        @media (min-width: 1024px) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        color: $white;
+        font-family: "Shrikhand", "cursive";
+        margin: 0;
+        margin-bottom: 16px;
+        font-size: 18px;
+        font-weight: 400;
+        font-style: italic;
+
+        @media (min-width: 1024px) {
+            padding: 38px 40px 20px 80px;
+            font-size: 1.3vw;
+        }
+    }
+
+    &__nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        @media (min-width: 1024px) {
+            display: flex;
+            padding: 10px;
+            margin-inline-start: auto;
+        }
+    }
+
+    &__nav-link {
+        margin: 8px 0;
+    }
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+
+        @media (min-width: 1024px) {
+            padding: 0px 20px 0px 10px;
+        }
+    }
+
+    &__icon {
+        width: 11px;
+        margin-right: 10px;
+    }
+}

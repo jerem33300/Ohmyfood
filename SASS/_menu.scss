@@ -1,5 +1,7 @@
 @import "./mixins-variables";
-
+@import "./animation";
+@import "./header";
+@import "./footer";
 
 /****** Header ***********/
 
@@ -48,7 +50,7 @@
 }
 
 .menu-pages {
-    margin-top: -32px;
+    margin-top: -42px;
     border-radius: 40px 40px 0 0;
     background-color: $light-grey;
     position: relative;
