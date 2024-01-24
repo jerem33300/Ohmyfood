@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: center;
   transition: opacity 1s ease-in-out;
-  animation: loader-stop 3.3s;
+  animation: loader-stop 2.6s;
 }
 
 .point {
@@ -142,7 +142,7 @@
 
 .vignets1 {
   animation: fadein 1.5s;
-  animation-delay: 2s;
+  animation-delay: 1.2s;
 }
 
 @keyframes fadein {
