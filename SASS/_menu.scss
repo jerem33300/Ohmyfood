@@ -125,7 +125,7 @@
         max-width: 100%;
     }
 
-    @for $i from 0 to 8 {
+    @for $i from 0 to 9 {
         .delay-#{$i} {
           animation-delay:  #{$i/10}s;
         }
