@@ -278,9 +278,14 @@
 }
 .menu-pages__title {
   font-family: "Shrikhand", "cursive";
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 500;
   padding-right: 70px;
+}
+@media (min-width: 1024px) {
+  .menu-pages__title {
+    font-size: 30px;
+  }
 }
 
 .menu-heart {
