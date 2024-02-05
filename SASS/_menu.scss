@@ -89,16 +89,19 @@
 .menu {
     max-width: 100%;
     padding: 0 14px;
+    margin-bottom: 20px;
+    display: grid;
 
     @media (min-width: 1024px) {
-        max-width: 70%;
+        max-width: 80%;
     }
 
     &__title {
         text-transform: uppercase;
         position: relative;
-        padding: 0px 8px 10px 19px;
+        padding: 0px 8px 10px 18px;
         font-weight: normal;
+        margin-bottom: auto;
 
         &:after {
             content: "";
@@ -126,6 +129,7 @@
         animation-fill-mode: both;
         transform: scale(0);
         max-width: 100%;
+        padding-bottom: 10px;
     }
 
     @for $i from 0 to 9 {
@@ -156,7 +160,6 @@
         justify-content: flex-end;
         align-items: flex-end;
         padding-right: 5px;
-        padding-bottom: 10px;
     }
 
     &__banner {
@@ -178,6 +181,7 @@
 .menu__confirmation {
     background-color: $color-tertiary;
     width: 50px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -185,7 +189,6 @@
     transition: 0.5s;
     margin-left: 20px;
     border-radius: 0 15px 15px 0;
-
 }
 
 .menu__plate:hover {
