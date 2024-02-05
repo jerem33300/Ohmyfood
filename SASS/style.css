@@ -326,13 +326,16 @@
 
 .menu {
   max-width: 100%;
-  padding: 0 14px;
+  padding: 10px;
   margin-bottom: 20px;
   display: grid;
 }
 @media (min-width: 1024px) {
   .menu {
     max-width: 80%;
+    padding: 10px;
+    margin-top: -15px;
+    margin-left: 5px;
   }
 }
 .menu__title {
@@ -396,6 +399,9 @@
   animation-delay: 0.8s;
 }
 .menu__items {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   flex: 1;
 }
 .menu__plate-title {
@@ -407,6 +413,8 @@
   font-weight: 300;
   font-size: 15.04px;
   margin: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__price {
   font-weight: bold;
