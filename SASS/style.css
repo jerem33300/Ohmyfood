@@ -176,7 +176,7 @@
 }
 .footer__logo {
   color: #fff;
-  font-family: "Shrikhand", "cursive";
+  font-family: "Shrikhand";
   margin: 0;
   margin-bottom: 16px;
   font-size: 18px;
@@ -493,7 +493,7 @@
 }
 .footer__logo {
   color: #fff;
-  font-family: "Shrikhand", "cursive";
+  font-family: "Shrikhand";
   margin: 0;
   margin-bottom: 16px;
   font-size: 18px;
@@ -635,10 +635,12 @@ body {
 /****** Fonctionnement ***********/
 .tuto {
   height: 400px;
+  padding-bottom: 30px;
 }
 @media (min-width: 1024px) {
   .tuto {
     height: 240px;
+    padding-bottom: 0px;
   }
 }
 .tuto__container {
@@ -672,6 +674,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     margin: 20px 120px 0px 120px;
+    padding-top: 20px;
   }
 }
 .tuto__number {
@@ -703,7 +706,7 @@ body {
 }
 @media (min-width: 1024px) {
   .tuto__list {
-    width: 28%;
+    width: 30%;
   }
 }
 .tuto__icon {
@@ -717,7 +720,7 @@ body {
 .tuto__text {
   font-family: Roboto;
   font-weight: 500;
-  size: 16px;
+  font-size: 16px;
   margin-top: 28px;
   margin-left: -15px;
 }
